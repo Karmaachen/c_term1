@@ -1,0 +1,34 @@
+//Environment:Microsoft Visual C++ 6.0
+#include <stdio.h>
+#define X 3
+int main(void)
+{
+	int a[X],i,j,t,q=X;
+	printf("input %d numbers\n",q+1);
+	for(i=0;i<=X;i++)   
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("These numbers are:\n");
+	for(i=0;i<=X;i++)
+	{
+		printf("%d ",a[i]);   
+	}
+	for(i=0;i<=X;i++)  //bubble
+	{
+	for(j=0;j<=X-i;j++)
+		{
+		if(a[j]>=a[j+1])
+			{
+			t=a[j];
+			a[j]=a[j+1];
+			a[j+1]=t;
+			}
+		}
+	}
+	printf("\nThese numbers are:\n");
+		for(i=0;i<=X;i++)
+	{
+		printf("%d ",a[i]);
+	}		
+}
